@@ -9,7 +9,6 @@
 
   roles:
     - ansible-network.network-engine
-      tags: report
 
   tasks:
     - name: CAPTURE SHOW INTERFACES

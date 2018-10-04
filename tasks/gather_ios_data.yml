@@ -15,3 +15,10 @@
     - name: DISPLAY SERIAL NUMBER
       debug:
         msg: "The serial number is:{{ ansible_net_serialnum }}"
+        
+    - name: COLLECT OUTPUT OF SHOW COMMANDS
+      ios_command:
+        commands:
+          - show run | i hostname
+          - show ip interface brief
+      tags: show

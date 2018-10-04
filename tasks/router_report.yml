@@ -13,3 +13,11 @@
         src: ../templates/os_report.j2
         dest: ~/networking-workshop/reports/{{ inventory_hostname }}.md
       tags: report
+
+    - name: CONSOLIDATE THE IOS DATA
+      assemble:
+        src: reports/
+        dest: network_os_report.md
+      delegate_to: localhost
+      run_once: yes
+      tags: report

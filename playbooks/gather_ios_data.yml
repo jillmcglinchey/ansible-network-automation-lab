@@ -3,3 +3,15 @@
   hosts: cisco
   connection: network_cli
   gather_facts: no
+  
+  tasks:
+    - name: GATHER ROUTER FACTS
+      ios_facts:
+      
+    - name: DISPLAY VERSION
+      debug:
+        msg: "The IOS version is: {{ ansible_net_version }}"
+
+    - name: DISPLAY SERIAL NUMBER
+      debug:
+        msg: "The serial number is:{{ ansible_net_serialnum }}"

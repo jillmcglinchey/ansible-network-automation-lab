@@ -1,0 +1,12 @@
+---
+- name: BACKUP ROUTER CONFIGURATIONS
+  hosts: cisco
+  connection: network_cli
+  gather_facts: no
+
+  tasks:
+    - name: BACKUP THE CONFIG
+      ios_config:
+        backup: yes
+      register: config_output
+      tags: backup

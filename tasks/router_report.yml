@@ -1,0 +1,15 @@
+---
+- name: GENERATE OS REPORT FROM ROUTERS
+  hosts: cisco
+  connection: network_cli
+  gather_facts: no
+
+  tasks:
+    - name: GATHER ROUTER FACTS
+      ios_facts:
+
+    - name: RENDER FACTS AS A REPORT
+      template:
+        src: ../templates/os_report.j2
+        dest: ~/networking-workshop/reports/{{ inventory_hostname }}.md
+      tags: report

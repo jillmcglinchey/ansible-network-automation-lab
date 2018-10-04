@@ -7,10 +7,10 @@ ansible_port=22
 cisco
 
 [cisco]
-rtr1 ansible_host=52.90.68.216 ansible_ssh_user=ec2-user private_ip=172.16.253.27 ansible_network_os=ios
-rtr2 ansible_host=18.209.95.25 ansible_ssh_user=ec2-user private_ip=172.17.2.150 ansible_network_os=ios
-rtr3 ansible_host=35.153.210.177 ansible_ssh_user=ec2-user private_ip=172.16.7.65 ansible_network_os=ios
-rtr4 ansible_host=34.229.160.36 ansible_ssh_user=ec2-user private_ip=172.17.246.222 ansible_network_os=ios
+rtr1 ansible_host= ansible_ssh_user=ec2-user private_ip=172.16.253.27 ansible_network_os=ios
+rtr2 ansible_host= ansible_ssh_user=ec2-user private_ip=172.17.2.150 ansible_network_os=ios
+rtr3 ansible_host= ansible_ssh_user=ec2-user private_ip=172.16.7.65 ansible_network_os=ios
+rtr4 ansible_host= ansible_ssh_user=ec2-user private_ip=172.17.246.222 ansible_network_os=ios
 
 
 [cisco:vars]
@@ -27,7 +27,7 @@ rtr2
 rtr4
 
 [hosts]
-host1 ansible_host=34.201.140.126 ansible_ssh_user=ec2-user private_ip=172.17.147.1
+host1 ansible_host= ansible_ssh_user=ec2-user private_ip=172.17.147.1
 
 [control]
-ansible ansible_host=54.175.237.163 ansible_ssh_user=ec2-user private_ip=172.16.247.37
+ansible ansible_host= ansible_ssh_user=ec2-user private_ip=172.16.247.37

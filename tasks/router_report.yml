@@ -16,8 +16,8 @@
 
     - name: CONSOLIDATE THE IOS DATA
       assemble:
-        src: reports/
-        dest: network_os_report.md
+        src: ~/networking-workshop/reports/
+        dest: ../network_os_report.md
       delegate_to: localhost
       run_once: yes
       tags: report
